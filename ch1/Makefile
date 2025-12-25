@@ -1,7 +1,10 @@
 .DEFAULT_GOAL := build
 .PHONY: fmt vet build
 
-fmt:
+clean:
+	rm -rf ./bin 
+
+fmt: clean
 	go fmt ./
 
 vet: fmt
@@ -9,6 +12,7 @@ vet: fmt
 
 build: vet
 	go build -o bin/hello hello.go
+
 
 Exec:
 	./bin/hello
