@@ -11,7 +11,7 @@ vet: fmt
 	go vet ./
 
 build: vet
-	go build -o bin/hello hello.go
+	go build -o bin/hello ./*.go
 
 
 Exec:
