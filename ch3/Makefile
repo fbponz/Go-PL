@@ -13,6 +13,5 @@ vet: fmt
 build: vet
 	go build -o bin/ch3 ./*.go
 
-
 Exec:
 	./bin/ch3
